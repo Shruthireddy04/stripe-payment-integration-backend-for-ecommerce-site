@@ -10,10 +10,10 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
 
 app.use(express.static(process.env.STATIC_DIR));
 
-app.get("/", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/index.html");
-  res.sendFile(path);
-});
+// app.get("/", (req, res) => {
+//   const path = resolve(process.env.STATIC_DIR + "/index.html");
+//   res.sendFile(path);
+// });
 
 app.get("/config", (req, res) => {
   res.send({
